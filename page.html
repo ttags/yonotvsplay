@@ -4,18 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>LIVE Page</title>
-<link href="https://dns-tv.pages.dev/logo/favicon.png" rel="icon" type="image/x-icon"/>
-      <script src="https://yonotv-now.pages.dev/click.js"></script>
+<link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjTMZUW020Uhv6WeeF6v61lYNBjtoknv_lG7aZXsDyRrUCOlQiyd_DMcRVHLMIwOEEfl26kGwrLhyphenhyphenxKmp_26X8rcyIepfuJXbiLwx7_1zHEHA4f4JeyHoJTQpbcYRHphXIhoyL_I0JSscHywHRRXDBOFumKHCxUpr59hFnxG9kQRVtz1D322yBM462BzyKW/s16000/Ytvs%20-final%20logo.jpg" rel="icon" type="image/x-icon"/>
+
 <script type="application/ld+json">
         {
             "@context": "http://schema.org/",
             "@type": "WebSite",
-            "name": "YoNoTV",
-            "alternateName": "YoNoTV Live",
-            "url": "https://www.yonotv.net/"
+            "name": "Yono TV Sports",
+            "alternateName": "Yono TV Sports",
+            "url": "https://www.yonotvs.com/"
         }
     </script>
- <title>LIVE Page</title>
+ <title>Live Page</title>
 <style>
     :root {
         --bg-color: #f5f5f5;
@@ -148,7 +148,7 @@
         position: absolute;
         top: 10px;
         right: 10px;
-        background: red;
+        background: green;
         color: white;
         border: none;
         padding: 6px 10px;
@@ -488,13 +488,41 @@
     });
 </script>
 
-        <div style="position:fixed;top:0;left:0;width:100%;height:1px;overflow:hidden;visibility:hidden;z-index:9999;">
-            <script id="_wauela">var _wau = _wau || []; _wau.push(["dynamic", "41j574olh0", "ela", "c4302bffffff", "small"]);
-            </script><script async src="//waust.at/d.js"></script>
-            <script type="text/javascript" src="//widget.supercounters.com/ssl/online_i.js"></script>
-            <script type="text/javascript">sc_online_i(1724104,"ffffff","e61c1c");</script>
-            <br><noscript><a href="https://www.supercounters.com/">Super counter</a></noscript>
-        </div>
 <script disable-devtool-auto="" src="https://cdn.jsdelivr.net/npm/disable-devtool"></script>
+
+    <script>
+        (function() {
+    // 1. Disable Right-Click (Context Menu)
+    document.addEventListener('contextmenu', function(event) {
+        event.preventDefault(); // This stops the menu from opening
+        // We removed the window.location.href redirect here.
+    });
+
+    // 2. Disable Keyboard Shortcuts (Inspect, View Source, etc.)
+    document.addEventListener('keydown', function(event) {
+        // List of keys to neutralize
+        const blockedKeys = [
+            { key: 'u', ctrl: true },               // View Source
+            { key: 'i', ctrl: true, shift: true },  // Inspect Element
+            { key: 'j', ctrl: true, shift: true },  // Console
+            { key: 'c', ctrl: true, shift: true },  // Elements
+            { key: 's', ctrl: true },               // Save Page
+            { key: 'F12', ctrl: false }             // DevTools
+        ];
+
+        blockedKeys.forEach(combo => {
+            const isKeyMatch = event.key.toLowerCase() === combo.key.toLowerCase();
+            const isCtrlMatch = combo.ctrl ? (event.ctrlKey || event.metaKey) : true;
+            const isShiftMatch = combo.shift ? event.shiftKey : true;
+
+            if (isKeyMatch && isCtrlMatch && isShiftMatch) {
+                event.preventDefault(); // Stop the browser from opening the tool
+                // No redirect added here. The key press just does nothing.
+            }
+        });
+    });
+})();
+    </script>
+    
 </body>
 </html>
